@@ -2,21 +2,24 @@ import React, { Component } from 'react';
 import {
   Dimensions,
   Image,
+  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
-  View,
+  View
 } from 'react-native';
 import imgBanner from '../../assets/images/awan.jpg';
 import FiturUtama from '../Fitur Utama/FiturUtama';
 import PayComponent from '../Pay/PayComponent';
+import PromoItems from '../Promo/PromoItems';
 
+// INI ADALAH FILE UTAMA
 const {height, width} = Dimensions.get('window');
 
 class CardPay extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <StatusBar style={styles.statusBar} />
         <Image style={styles.imageBanner} source={imgBanner} />
         <Text style={styles.greetText}>Selamat Datang</Text>
@@ -34,10 +37,6 @@ class CardPay extends Component {
             <Text>Rp. 2.000.000</Text>
           </View>
 
-          {/* <View style={styles.textBankII}>
-            <Text>Bank Kucrut</Text>
-            <Text>Rp. 5.000.000</Text>
-          </View> */}
           <View style={styles.garisCard}></View>
           {/* Pembuatan icon row pay*/}
           <PayComponent />
@@ -46,7 +45,11 @@ class CardPay extends Component {
         <View style={{marginHorizontal: 18}}>
           <FiturUtama />
         </View>
-      </View>
+        {/* Ini adalah pemisah */}
+        <View style={styles.divider}>
+          <PromoItems/>
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -55,7 +58,7 @@ export default CardPay;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     backgroundColor: 'white',
   },
   statusBar: {
@@ -71,8 +74,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: 'bold',
     position: 'absolute',
-    alignSelf: 'center', //ini bisa di hilangkan untuk ke kiri
-    //left:20,
+    alignSelf: 'center',
     top: 40,
     color: '#383838',
   },
@@ -98,17 +100,9 @@ const styles = StyleSheet.create({
     color: '#383838',
     justifyContent: 'space-between',
   },
-  textBankII: {
-    flexDirection: 'column',
-    fontSize: 16,
-    top: 60,
-    left: 60,
-    justifyContent: 'space-between',
-  },
   garisCard: {
     height: 0.8,
     backgroundColor: '#adadad',
-    //top:40,
     marginTop: 10,
     marginHorizontal: 10,
   },
@@ -122,4 +116,10 @@ const styles = StyleSheet.create({
     marginTop: 16,
     marginHorizontal: 20,
   },
+  divider: {
+    width : width,
+    height: 15,
+    backgroundColor: "#ededed",
+    marginVertical:15
+  }
 });
