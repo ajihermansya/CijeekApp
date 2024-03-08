@@ -1,21 +1,15 @@
-import React from 'react'
-import { ScrollView, StyleSheet } from 'react-native'
-import CardPay from './src/components/CardPay/CardPay'
+import React, { Component } from 'react';
+import { Dimensions } from 'react-native';
+import Routes from './src/components/Config/route';
+const {height, width} = Dimensions.get('window');
 
-const App = () => {
-
-  return (
-    <ScrollView contentContainerStyle={styles.container}>
-    <CardPay />
-  </ScrollView>
+class App extends Component {
+render() {
+  return(
+    <Routes/>
   )
+}
 }
 
 export default App
 
-const styles = StyleSheet.create({
-  container: {
-    flexGrow: 1,
-    backgroundColor: '#fff',
-  },
-});

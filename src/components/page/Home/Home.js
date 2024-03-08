@@ -2,23 +2,25 @@ import React, { Component } from 'react';
 import {
   Dimensions,
   Image,
+  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
   View
 } from 'react-native';
-import imgBanner from '../../assets/images/awan.jpg';
-import FiturUtama from '../FiturUtama/FiturUtama';
-import PayComponent from '../Pay/PayComponent';
-import PromoItems from '../Promo/PromoItems';
+import imgBanner from '../../../assets/images/awan.jpg';
+import FiturUtama from '../../fiturutama/FiturUtama';
+import PayComponent from '../../pay/PayComponent';
+import PromoItems from '../../promo/PromoItems';
+
 
 // INI ADALAH FILE UTAMA
 const {height, width} = Dimensions.get('window');
 
-class CardPay extends Component {
+class Home extends Component {
   render() {
     return (
-      <View contentContainerStyle={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
         <StatusBar style={styles.statusBar} />
         <Image style={styles.imageBanner} source={imgBanner} />
         <Text style={styles.greetText}>Selamat Datang</Text>
@@ -48,12 +50,12 @@ class CardPay extends Component {
         <View style={styles.divider}>
           <PromoItems/>
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
 
-export default CardPay;
+export default Home;
 
 const styles = StyleSheet.create({
   container: {
