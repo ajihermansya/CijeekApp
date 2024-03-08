@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
-
+import Icon from 'react-native-vector-icons/Ionicons';
 const { width } = Dimensions.get('window');
 
 const PromoItemsSub = props => {
@@ -18,6 +18,10 @@ const PromoItemsSub = props => {
         props.diskon ? <View style={styles.textdiskon}><Text>{props.diskon}</Text></View> :
           <View></View>
       }
+
+      <View>
+        <Icon name="calendar-outline" size={20} color="#575757" />
+      </View>
 
     </View>
   );
@@ -52,6 +56,6 @@ const styles = StyleSheet.create({
     padding: 4,
     color: 'black',
     borderRadius: 4,
-    left:4
+    left: 4
   }
 });

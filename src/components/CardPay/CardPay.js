@@ -9,7 +9,7 @@ import {
   View
 } from 'react-native';
 import imgBanner from '../../assets/images/awan.jpg';
-import FiturUtama from '../Fitur Utama/FiturUtama';
+import FiturUtama from '../FiturUtama/FiturUtama';
 import PayComponent from '../Pay/PayComponent';
 import PromoItems from '../Promo/PromoItems';
 

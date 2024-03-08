@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet } from 'react-native'
 import CardPay from './src/components/CardPay/CardPay'
 
 const App = () => {
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
     <CardPay />

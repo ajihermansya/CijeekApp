@@ -15,13 +15,12 @@ const PromoItems = () => {
 <PromoItemsSub
         image={{uri : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPdICnUXV8X-2fnxxoh3VUhcy4jDtq5Us7WxuVkvsj5nVkLBI_FodBg6q20Re4j1snzVU&usqp=CAU"}}
         text="Coffe"
-        diskon="Diskon 70%"
+    
     />
 
 <PromoItemsSub
         image={{uri : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPdICnUXV8X-2fnxxoh3VUhcy4jDtq5Us7WxuVkvsj5nVkLBI_FodBg6q20Re4j1snzVU&usqp=CAU"}}
         text="Coffe"
-        diskon="Diskon 70%"
     />
     <PromoItemsSub
         image={{uri : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPdICnUXV8X-2fnxxoh3VUhcy4jDtq5Us7WxuVkvsj5nVkLBI_FodBg6q20Re4j1snzVU&usqp=CAU"}}

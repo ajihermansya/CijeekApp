@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
+
 // menggunakan fungsi karena simple sehingga tidak menggunakan class
 
 // const FiturUtamaSub = props => {
@@ -20,6 +21,7 @@ class FiturUtamaSub extends React.Component{
             <View style={{width:"25%", alignItems:"center"}}>
             <Image style={styles.imagefiturHome} source={this.props.image} />
             <Text style={styles.textfiturHome}>{this.props.title}</Text>
+            
           </View>
         )
     }
