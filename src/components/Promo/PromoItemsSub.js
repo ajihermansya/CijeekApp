@@ -18,9 +18,11 @@ const PromoItemsSub = props => {
         props.diskon ? <View style={styles.textdiskon}><Text>{props.diskon}</Text></View> :
           <View></View>
       }
+{/* Celender disini */}
 
-      <View>
-        <Icon name="calendar-outline" size={20} color="#575757" />
+      <View style={{marginLeft:10, marginBottom:8, flexDirection:'row'}}>
+        <Icon name="calendar-outline" size={16} color="#575757" />
+        <Text style={{left:10, fontSize:15, color :"#575757"}}>{props.masaBerlaku}</Text>
       </View>
 
     </View>

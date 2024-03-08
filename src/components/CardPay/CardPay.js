@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
   Dimensions,
   Image,
-  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
@@ -19,7 +18,7 @@ const {height, width} = Dimensions.get('window');
 class CardPay extends Component {
   render() {
     return (
-      <ScrollView contentContainerStyle={styles.container}>
+      <View contentContainerStyle={styles.container}>
         <StatusBar style={styles.statusBar} />
         <Image style={styles.imageBanner} source={imgBanner} />
         <Text style={styles.greetText}>Selamat Datang</Text>
@@ -49,7 +48,7 @@ class CardPay extends Component {
         <View style={styles.divider}>
           <PromoItems/>
         </View>
-      </ScrollView>
+      </View>
     );
   }
 }
