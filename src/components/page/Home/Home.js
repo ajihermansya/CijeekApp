@@ -13,9 +13,8 @@ import FiturUtama from '../../fiturutama/FiturUtama';
 import PayComponent from '../../pay/PayComponent';
 import PromoItems from '../../promo/PromoItems';
 
-
 // INI ADALAH FILE UTAMA
-const {height, width} = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 
 class Home extends Component {
   render() {
@@ -43,12 +42,12 @@ class Home extends Component {
           <PayComponent />
         </View>
         {/* Include pembuatan icon utama */}
-        <View style={{marginHorizontal: 18}}>
+        <View style={{ marginHorizontal: 18 }}>
           <FiturUtama />
         </View>
         {/* Ini adalah pemisah */}
         <View style={styles.divider}>
-          <PromoItems/>
+          <PromoItems />
         </View>
       </ScrollView>
     );
@@ -61,6 +60,7 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     backgroundColor: 'white',
+    paddingBottom: 20, // Mengatur padding bottom untuk memungkinkan konten dapat discroll sepenuhnya
   },
   statusBar: {
     barStyle: 'dark-content',
@@ -81,7 +81,6 @@ const styles = StyleSheet.create({
   },
   wrapperCard: {
     marginHorizontal: 18,
-    height: 170,
     marginTop: -60,
     backgroundColor: 'white',
     elevation: 4,
@@ -118,9 +117,9 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   divider: {
-    width : width,
+    width: width,
     height: 15,
     backgroundColor: "#ededed",
-    marginVertical:15
+    marginVertical: 15
   }
 });
