@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import FiturUtamaSub from './FiturUtamaSub';
@@ -5,9 +6,11 @@ import FiturUtamaSub from './FiturUtamaSub';
 // menggunakan fungsi karena simple sehingga tidak menggunakan class
 
 const FiturUtama = () => {
+  const navigation = useNavigation();
   return (
-    <View style={styles.wrapperHome}>
-    <FiturUtamaSub image={require('../../assets/icon/food.jpg')} title="Food"/>
+    <View style={styles.wrapperFiturUtama}>
+    {/* penambahan onpress */}
+    <FiturUtamaSub onPress={() => navigation.navigate('Food')} image={require('../../assets/icon/food.jpg')} title="Food"/>
     <FiturUtamaSub image={require('../../assets/icon/bike.jpg')} title="Bike"/>
     <FiturUtamaSub image={require('../../assets/icon/car.jpg')} title="Car"/>
     <FiturUtamaSub image={require('../../assets/icon/send.jpg')} title="Delivery"/>
@@ -26,7 +29,7 @@ const FiturUtama = () => {
 export default FiturUtama;
 
 const styles = StyleSheet.create({
-  wrapperHome: {
+  wrapperFiturUtama: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 20,

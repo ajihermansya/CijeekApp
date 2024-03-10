@@ -44,9 +44,11 @@ class Home extends Component {
         {/* Include pembuatan icon utama */}
         <View style={{ marginHorizontal: 18 }}>
           <FiturUtama />
+
         </View>
         {/* Ini adalah pemisah */}
-        <View style={styles.divider}>
+        <View style={styles.garisCard}></View>
+        <View >
           <PromoItems />
         </View>
       </ScrollView>
@@ -117,9 +119,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   divider: {
+    //ini bisa di bikin buat vertikal ya
     width: width,
-    height: 15,
+    height: 10,
     backgroundColor: "#ededed",
-    marginVertical: 15
+    marginVertical: 30
   }
 });

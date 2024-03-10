@@ -1,10 +1,12 @@
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import React, { Component } from 'react';
 import { Image, View } from 'react-native';
 import { Account, Activity, Home, Inbox, Payment } from '../../page';
 
 const MaterialBottom = createMaterialBottomTabNavigator();
+const HomeStack = createStackNavigator()
 
 export default class Index extends Component {
   render() {
@@ -15,9 +17,13 @@ export default class Index extends Component {
           initialRouteName="Home"
           activeColor="#09AB54"
           inactiveColor="#676767"
-          barStyle={{backgroundColor: 'white', borderWidth:.1, borderColor:"lightgrey" }
-          }>
-
+          barStyle={{
+            backgroundColor: 'white',
+            borderWidth: 0.1,
+            borderColor: 'lightgrey',
+          }}
+         
+          >
           <MaterialBottom.Screen
             name="Home"
             component={Home}
@@ -42,10 +48,12 @@ export default class Index extends Component {
             }}
           />
 
-          <MaterialBottom.Screen name="Actvity" component={Activity}
+          <MaterialBottom.Screen
+            name="Activity"
+            component={Activity}
             //styles
             options={{
-              tabBarLabel: 'Actvity',
+              tabBarLabel: 'Activity',
               tabBarIcon: ({color}) => (
                 <View style={{marginTop: -2}}>
                   {color == '#09AB54' ? (
@@ -64,10 +72,11 @@ export default class Index extends Component {
             }}
           />
 
-
-          <MaterialBottom.Screen name="Payment" component={Payment} 
-              //styles
-              options={{
+          <MaterialBottom.Screen
+            name="Payment"
+            component={Payment}
+            //styles
+            options={{
               tabBarLabel: 'Payment',
               tabBarIcon: ({color}) => (
                 <View style={{marginTop: -2}}>
@@ -87,9 +96,11 @@ export default class Index extends Component {
             }}
           />
 
-          <MaterialBottom.Screen name="Inbox" component={Inbox} 
-              //styles
-              options={{
+          <MaterialBottom.Screen
+            name="Inbox"
+            component={Inbox}
+            //styles
+            options={{
               tabBarLabel: 'Inbox',
               tabBarIcon: ({color}) => (
                 <View style={{marginTop: -2}}>
@@ -106,13 +117,15 @@ export default class Index extends Component {
                   )}
                 </View>
               ),
-              tabBarBadge:1
+              tabBarBadge: 1,
             }}
           />
 
-          <MaterialBottom.Screen name="Account" component={Account} 
-              //styles
-              options={{
+          <MaterialBottom.Screen
+            name="Account"
+            component={Account}
+            //styles
+            options={{
               tabBarLabel: 'Account',
               tabBarIcon: ({color}) => (
                 <View style={{marginTop: -2}}>

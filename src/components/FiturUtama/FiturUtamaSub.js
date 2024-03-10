@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 
 // menggunakan fungsi karena simple sehingga tidak menggunakan class
@@ -13,16 +13,16 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 //   );
 // };
 
-// Cara Menggunakan Komponen Pada react untuk pemanggilan menu, menggunakan this 
+// Cara Menggunakan Komponen Pada react untuk pemanggilan menu, menggunakan this
 // untuk mengetahui varibael penggunaan props
 class FiturUtamaSub extends React.Component{
     render() {
         return (
-            <View style={{width:"25%", alignItems:"center"}}>
+            <TouchableOpacity onPress={this.props.onPress} style={{width:"25%", alignItems:"center"}}>
             <Image style={styles.imagefiturHome} source={this.props.image} />
             <Text style={styles.textfiturHome}>{this.props.title}</Text>
             
-          </View>
+          </TouchableOpacity>
         )
     }
 }
