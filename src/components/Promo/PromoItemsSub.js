@@ -1,17 +1,21 @@
 import React from 'react';
 import { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+
 const { width } = Dimensions.get('window');
 
 const PromoItemsSub = props => {
   return (
+
     <View style={styles.wrapper}>
       <Image source={props.image} style={styles.promoimage} />
+      
       <View style={styles.textpromo}>
         <Text style={{
           marginVertical: 10,
           fontWeight: 'bold',
         }}>{props.text}</Text>
+        
       </View>
 
       {

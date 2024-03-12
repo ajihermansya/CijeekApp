@@ -15,6 +15,7 @@ import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 // Cara Menggunakan Komponen Pada react untuk pemanggilan menu, menggunakan this
 // untuk mengetahui varibael penggunaan props
+
 class FiturUtamaSub extends React.Component{
     render() {
         return (

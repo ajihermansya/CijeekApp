@@ -22,6 +22,7 @@ class Home extends Component {
       <ScrollView contentContainerStyle={styles.container}>
         <StatusBar style={styles.statusBar} />
         <Image style={styles.imageBanner} source={imgBanner} />
+        
         <Text style={styles.greetText}>Selamat Datang</Text>
 
         {/* pembuatan card bagrund putih ini di catat */}
@@ -38,9 +39,11 @@ class Home extends Component {
           </View>
 
           <View style={styles.garisCard}></View>
+          
           {/* Pembuatan icon row pay*/}
           <PayComponent />
         </View>
+
         {/* Include pembuatan icon utama */}
         <View style={{ marginHorizontal: 18 }}>
           <FiturUtama />
